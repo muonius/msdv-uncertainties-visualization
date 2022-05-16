@@ -257,15 +257,15 @@ function draw() {
   //Draw interactive tooltip
 
   push();
-  translate(400, 226, -150);
+  translate(350, 200, -150);
   // plinkoTooltip.noStroke();
   // ambientMaterial(255, 0, 255);
   legend.background(255);
   legend.textFont("Futura");
-  legend.text("Linear", 0, 100);
-  legend.text("Logistic", 0, 150);
-  legend.text("Poisson", 0, 200);
-  legend.text("Miscellaneous", 0, 250);
+  legend.text("Linear", 0, 105);
+  legend.text("Logistic", 0, 145);
+  legend.text("Poisson", 0, 190);
+  legend.text("Miscellaneous", 0, 230);
   legend.textSize(20);
   legend.textAlign(LEFT);
   texture(legend);
