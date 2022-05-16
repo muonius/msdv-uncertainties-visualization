@@ -127,7 +127,7 @@ function setup() {
   leagueBackdrop = createGraphics(240, 120);
   refereeBackdrop = createGraphics(320, 120);
   drawBackdrop = createGraphics(100, 100);
-  legend = createGraphics(400, 400);
+  legend = createGraphics(140, 400);
 
   //initialize plinkos
   addPlayers();
@@ -257,7 +257,7 @@ function draw() {
   //Draw interactive tooltip
 
   push();
-  translate(530, 226, -150);
+  translate(400, 226, -150);
   // plinkoTooltip.noStroke();
   // ambientMaterial(255, 0, 255);
   legend.background(255);
@@ -270,6 +270,6 @@ function draw() {
   legend.textAlign(LEFT);
   texture(legend);
   noStroke();
-  plane(400, 400);
+  plane(140, 400);
   pop();
 }
