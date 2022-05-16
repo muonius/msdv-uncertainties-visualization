@@ -32,7 +32,7 @@ function noCovariates() {
     10,
     0.1,
     0.9,
-    colorParticle.poisson,
+    colorParticle.misc,
     0.05
   );
   teams.push(teamF);
