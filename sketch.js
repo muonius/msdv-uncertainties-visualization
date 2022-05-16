@@ -23,16 +23,15 @@ let uniquepositions;
 let uniquelabels;
 
 //*********Draw Backdrops
-let drawBackground;
+let drawBackdrop;
 let playerBackdrop;
 let leagueBackdrop;
 let refereeBackdrop;
 
 //*********Axis
 let oddRatio;
-let oddratios = [0, 0.5, 1, 1.5, 2, 2.5, 3];
-// let xArray = [-10, 0, 20, -20, 40];
-// let colors = ["orange", "blue", "green", "purple", "grey"];
+let oddratios = [-0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5];
+
 //*********Draw world in World
 let world;
 let ground;
@@ -52,16 +51,16 @@ let playerHeight;
 let playerWeight;
 let playerScore;
 let playerAge;
-let playerName;
+let playerSelf;
 let playerVictory;
 let plinkos = [];
 //League plinkos
 let leagueCountry;
-let leagueName;
+let leagueSelf;
 let leagues = [];
 //Referee plinko
 let refCountry;
-let refName;
+let refSelf;
 let refCard;
 let referees = [];
 //Num of draws plinko
@@ -122,7 +121,7 @@ function setup() {
   playerBackdrop = createGraphics(400, 300);
   leagueBackdrop = createGraphics(240, 120);
   refereeBackdrop = createGraphics(320, 120);
-  drawBackgroup = createGraphics(100, 100);
+  drawBackdrop = createGraphics(100, 100);
 
   //initialize plinkos
   addPlayers();
@@ -178,26 +177,7 @@ function draw() {
   drawLeagueBackdrop();
   drawRefereeBackdrop();
 
-  //*****************static odd ratio plane*/
-  oddRatio.background("black");
-  for (let i = 0; i < oddratios.length; i++) {
-    let x = map(i, 0, oddratios.length - 1, -20, height / 2 + 60);
-    oddRatio.text(oddratios[i], x, 270);
-  }
-  oddRatio.fill(255);
-  oddRatio.textSize(20);
-  oddRatio.textAlign(CENTER);
-
-  //display odd ratio plane
-  push();
-  noStroke();
-
-  translate(0, height / 2 - 50);
-  rotateX(PI / 2);
-  // ambientMaterial(255, 0, 0);
-  texture(oddRatio);
-  plane(800, 800);
-  pop();
+  drawAxis();
 
   //*****************display bounds
   for (let i = 0; i < boundaries.length; i++) {
