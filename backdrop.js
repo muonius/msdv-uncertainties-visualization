@@ -91,7 +91,7 @@ function drawAxis() {
   oddRatio.fill(255);
   oddRatio.textSize(16);
   for (let i = 0; i < oddratios.length; i++) {
-    let x = map(i, 0, oddratios.length - 1, -80, 600);
+    let x = map(i, 0, oddratios.length - 1, 60, 480);
     oddRatio.text(oddratios[i], x, 270);
   }
   oddRatio.textSize(16);
