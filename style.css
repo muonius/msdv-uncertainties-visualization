@@ -33,9 +33,9 @@ h1 {
   color: #800020;
   font-weight: 700;
   /* font-family: "Goldman"; */
-  font-size: 3.5rem;
+  font-size: 3rem;
   background: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
 
   margin: 0 auto;
   text-align: center;
@@ -43,7 +43,7 @@ h1 {
 
 p {
   font-family: "DM Sans";
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0.2rem;
   margin: 0 auto;
   text-align: center;
