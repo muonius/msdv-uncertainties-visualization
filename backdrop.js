@@ -24,7 +24,7 @@ function drawLeagueBackdrop() {
   translate(20, 10, -50);
   // rotateX(HALF_PI);
   leagueBackdrop.background("#C8D5E5");
-  leagueBackdrop.text("LEAUGE", 20, 30);
+  leagueBackdrop.text("LEAGUE", 20, 30);
   leagueBackdrop.fill("Black");
   leagueBackdrop.textSize(20);
   leagueBackdrop.textFont("Syncopate");
