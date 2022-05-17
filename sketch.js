@@ -163,7 +163,7 @@ function setup() {
 
 function draw() {
   orbitControl();
-  // rotateY(-0.1);
+  rotateY(-0.1);
   // rotateX(0.01);
   // rotateZ(-0.3);
   // ambientLight(255, 255, 255);
