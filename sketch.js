@@ -179,7 +179,7 @@ function draw() {
   translate(0, 0, -150);
   fill(255);
   noStroke();
-  plane(1000, 900);
+  plane(1000, 1000);
   pop();
 
   drawPlayerBackdrop();
