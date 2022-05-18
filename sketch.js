@@ -21,6 +21,7 @@ let plinkolabels = [];
 let plinkopositions = [];
 let uniquepositions;
 let uniquelabels;
+let radioLabel;
 
 //*********Draw Backdrops
 let drawBackdrop;
@@ -103,8 +104,8 @@ function setup() {
   world = engine.world;
 
   radio = createRadio();
-  radio.option("PLR", "Players, Leagues, and Referees");
-  radio.option("PL", "Players and Leagues");
+  radio.option("PLR", "  Players, Leagues, and Referees");
+  radio.option("PL", "  Players and Leagues");
   radio.option("PR", "Players and Referees");
   radio.option("P", "Only Players");
   radio.option("L", "Only Leagues");
@@ -112,13 +113,19 @@ function setup() {
   radio.option("D", "Only Draws");
   radio.option("N", "None");
   radio.option("F", "Final State");
-  // radio.style("width", "400px");
+  radio.style("width", "400px");
+  radio.style("height", "300px");
   radio.style("transform: translate(900px,-600px)");
   //customize style using CSS
 
-  radio.style("display: grid");
-  radio.style("font-family:Arial");
-  radio.style("font-size:26px");
+  // radio.style("display: grid");
+  radio.style("font-family: DM Sans");
+  radio.style("font-size:1.2rem");
+
+  radio.style("vertical-align:center");
+  radio.attribute("class", "radio");
+  // radio.style("");
+  // console.log(radio);
 
   //create text
   plinkoTooltip = createGraphics(800, 800);
@@ -128,6 +135,7 @@ function setup() {
   refereeBackdrop = createGraphics(320, 120);
   drawBackdrop = createGraphics(100, 100);
   legend = createGraphics(140, 400);
+  radioLabel = createGraphics(200, 50);
 
   //initialize plinkos
   addPlayers();
@@ -261,12 +269,12 @@ function draw() {
   // plinkoTooltip.noStroke();
   // ambientMaterial(255, 0, 255);
   legend.background(255);
-  legend.textFont("Futura");
+  legend.textFont("DM Sans");
   legend.text("Linear", 0, 105);
   legend.text("Logistic", 0, 145);
   legend.text("Poisson", 0, 190);
   legend.text("Miscellaneous", 0, 230);
-  legend.textSize(20);
+  legend.textSize(16);
   legend.textAlign(LEFT);
   texture(legend);
   noStroke();
