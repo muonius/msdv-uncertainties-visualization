@@ -293,7 +293,7 @@ function threeCovariates() {
 
 function onlyLeagues() {
   let teamD = new Particle(
-    70,
+    40,
     -height / 2 + 350,
     10,
     0.1,

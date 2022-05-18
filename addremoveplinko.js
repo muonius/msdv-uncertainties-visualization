@@ -125,7 +125,7 @@ function addLeagues() {
 
 function addReferees() {
   //draw referees plinkos
-  refCard = new Plinko(
+  refCountry = new Plinko(
     -70,
     -height / 2 + 550,
     pRadius,
@@ -133,9 +133,9 @@ function addReferees() {
     pAngleStart,
     colorPlinko.referees,
     true,
-    "Referee's Card Given"
+    "Referee's Country"
   );
-  referees.push(refCard);
+  referees.push(refCountry);
   refSelf = new Plinko(
     20,
     -height / 2 + 550,
@@ -147,7 +147,7 @@ function addReferees() {
     "Referee Self"
   );
   referees.push(refSelf);
-  refCountry = new Plinko(
+  refCard = new Plinko(
     120,
     -height / 2 + 550,
     pRadius,
@@ -155,9 +155,9 @@ function addReferees() {
     pAngleStart,
     colorPlinko.referees,
     true,
-    "Referee's Country'"
+    "Referee's Cards"
   );
-  referees.push(refCountry);
+  referees.push(refCard);
 }
 
 function removePlayers() {

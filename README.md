@@ -1,6 +1,6 @@
 # Visualizing Uncertainty in Analytical Research
 
-   <img src="./assets/cover.png" width="500" alt="cover">
+   <img src="./assets/Plinko_3D.png" width="500" alt="Plinko 3D">
 
 ### 1. Uncertainty Type and Data Selection
 
