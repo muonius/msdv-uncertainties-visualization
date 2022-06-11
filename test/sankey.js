@@ -1,13 +1,12 @@
-async function draw() {
-  const d3 = await Promise.all([import("d3-sankey")]).then((d3) =>
-    Object.assign({}, ...d3)
-  );
+const d3Sankey = d3.sankey();
 
-  const analysis = await d3.csv("./assets/analysis.csv", (d) => {
+async function draw() {
+  const analysis = await d3.csv("../assets/analysis.csv", (d) => {
     d3.autoType(d);
     return d;
   });
 
+  debugger;
   const chart = SankeyChart(
     {
       links: analysis,
@@ -25,7 +24,7 @@ async function draw() {
     }
   );
 
-  // console.log(analysis);
+  console.log(analysis);
   // const wrapperArea = d3.select("#chart").append("svg");
 
   // Copyright 2021 Observable, Inc.
@@ -55,7 +54,7 @@ async function draw() {
       linkSource = ({ source }) => source, // given d in links, returns a node identifier string
       linkTarget = ({ target }) => target, // given d in links, returns a node identifier string
       linkValue = ({ value }) => value, // given d in links, returns the quantitative value
-      linkPath = d3Sankey.sankeyLinkHorizontal(), // given d in (computed) links, returns the SVG path
+      linkPath = d3.sankeyLinkHorizontal(), // given d in (computed) links, returns the SVG path
       linkTitle = (d) => `${d.source.id} → ${d.target.id}\n${format(d.value)}`, // given d in (computed) links
       linkColor = "source-target", // source, target, source-target, or static color
       linkStrokeOpacity = 0.5, // link stroke opacity
@@ -117,7 +116,6 @@ async function draw() {
 
     // Compute the Sankey layout.
     d3Sankey
-      .sankey()
       .nodeId(({ index: i }) => N[i])
       .nodeAlign(nodeAlign)
       .nodeWidth(nodeWidth)
