@@ -1,5 +1,7 @@
 async function draw() {
-  // .iternations(100);
+  // const d3 = await Promise.all([import("d3-sankey")]).then((d3) =>
+  //   Object.assign({}, ...d3)
+  // );
 
   const analysis = await d3.csv("./assets/analysis.csv", (d) => {
     d3.autoType(d);
