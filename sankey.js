@@ -1,12 +1,4 @@
 async function draw() {
-  const d3Sankey = d3
-    .sankey()
-    .nodePadding(50)
-    .nodeWidth(30)
-    .extent([
-      [50, 50],
-      [600, 400],
-    ]);
   // .iternations(100);
 
   const analysis = await d3.csv("./assets/analysis.csv", (d) => {
