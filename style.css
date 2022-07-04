@@ -77,3 +77,10 @@ h3 {
   text-align: center;
   padding: 1rem;
 }
+
+#description {
+  display: inline-block;
+}
+#sankey {
+  display: inline-block;
+}
