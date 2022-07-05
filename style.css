@@ -26,7 +26,7 @@ html {
   box-sizing: inherit;
 }
 
-div {
+div.radio {
   display: grid;
   grid-template-columns: 1fr 9fr;
 }
@@ -37,14 +37,14 @@ input {
 }
 
 label.radio {
-  line-height: 1.2rem;
+  line-height: 1rem;
   vertical-align: center;
 }
 
-main {
+/* main {
   margin: 0 auto;
   display: inline-block;
-}
+} */
 
 h3 {
   text-align: right;
@@ -78,9 +78,24 @@ h3 {
   padding: 1rem;
 }
 
-#description {
-  display: inline-block;
+p {
+  font-family: "DM Sans";
 }
+#intro {
+  /* background: red; */
+  display: flex;
+  /* grid-template-colomns: repeat(2, 1fr); */
+}
+
+#description {
+  /* background: green; */
+  width: 20%;
+  margin: 2% 2%;
+}
+
 #sankey {
-  display: inline-block;
+  /* width: 100%; */
+  margin: 2% 2%;
+  min-height: 600px;
+  /* background: purple; */
 }
