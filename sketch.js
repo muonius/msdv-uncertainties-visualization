@@ -95,6 +95,9 @@ const colorPlinko = {
   referees: "#FAC564",
 };
 
+//*********ButtonValues
+let PLRpressed = false;
+
 function setup() {
   createCanvas(dWidth, dWidth, WEBGL);
   randomSeed(50);
@@ -103,20 +106,34 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  button = createButton("click me", "PLR");
   // button.position(300, 300);
-  button.mousePressed(() => setScene());
-  button.style("transform: translate(900px,-200px)");
+  input = createInput("Click through below radio buttons to show simulations");
+  input.style("font-size", "1rem");
+  input.style("font-family", "DM Sans");
+  input.style("background", "#dddddd");
+  input.style("width", "410px");
+  input.style("height", "20px");
+  input.style("border", "none");
+  input.style("transform: translate(900px,-650px)");
+
+  input2 = createInput("based on selection of different covariates.");
+  input2.style("font-size", "1rem");
+  input2.style("font-family", "DM Sans");
+  input2.style("background", "#dddddd");
+  input2.style("width", "400px");
+  input2.style("height", "20px");
+  input2.style("border", "none");
+  input2.style("transform: translate(490px,-620px)");
 
   radio = createRadio();
-  radio.option("PLR", "  Players, Leagues, and Referees");
-  radio.option("PL", "  Players and Leagues");
+  radio.option("PLR", "Players, Leagues, and Referees");
+  radio.option("PL", "Players and Leagues");
   radio.option("PR", "Players and Referees");
   radio.option("P", "Only Players");
   radio.option("L", "Only Leagues");
   // radio.option("R", "Only Referees");
   radio.option("D", "Only Draws");
-  radio.option("N", "None");
+  radio.option("N", "No Covariates");
   radio.option("F", "Final State");
   radio.style("width", "400px");
   radio.style("height", "300px");
@@ -125,7 +142,7 @@ function setup() {
 
   // radio.style("display: grid");
   radio.style("font-family: DM Sans");
-  radio.style("font-size:1.2rem");
+  radio.style("font-size:1rem");
 
   radio.style("vertical-align:center");
   radio.attribute("class", "radio");
@@ -246,7 +263,7 @@ function draw() {
     }
   }
   //**************Change Scene Based on Radio Selection */
-  selectVal = button.value();
+  selectVal = radio.value();
   setScene(selectVal);
 
   //**************Tooltip */
