@@ -26,10 +26,10 @@ html {
   box-sizing: inherit;
 }
 
-div.radio {
+/* div {
   display: grid;
   grid-template-columns: 1fr 9fr;
-}
+} */
 
 input {
   line-height: 2rem;
@@ -39,6 +39,8 @@ input {
 label.radio {
   line-height: 1rem;
   vertical-align: center;
+  display: grid;
+  /* grid-template-columns: 1fr 9fr; */
 }
 
 /* main {
@@ -87,15 +89,15 @@ p {
   /* grid-template-colomns: repeat(2, 1fr); */
 }
 
-#description {
+div#description {
   /* background: green; */
-  width: 20%;
+  width: 40%;
   margin: 2% 2%;
 }
 
-#sankey {
+div#sankey {
   /* width: 100%; */
   margin: 2% 2%;
-  min-height: 600px;
+  min-height: 550px;
   /* background: purple; */
 }

@@ -103,6 +103,11 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
+  button = createButton("click me", "PLR");
+  // button.position(300, 300);
+  button.mousePressed(() => setScene());
+  button.style("transform: translate(900px,-200px)");
+
   radio = createRadio();
   radio.option("PLR", "  Players, Leagues, and Referees");
   radio.option("PL", "  Players and Leagues");
@@ -170,7 +175,7 @@ function setup() {
 }
 
 function draw() {
-  orbitControl();
+  orbitControl(0.9);
   rotateY(-0.1);
   // rotateX(0.01);
   // rotateZ(-0.3);
@@ -241,7 +246,7 @@ function draw() {
     }
   }
   //**************Change Scene Based on Radio Selection */
-  selectVal = radio.value();
+  selectVal = button.value();
   setScene(selectVal);
 
   //**************Tooltip */
