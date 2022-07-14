@@ -8,9 +8,9 @@ The psychological science community is undergoing a replication crisis where acc
 
 #### Uncertainty Project
 
-The project is based on a crowd-sourced research experiment conducted by Silberzahn & Uhlmann in 2015, during which 29 teams of data experts were tasked to analyze the same set of data about occer players and attempt to answer the same question using an odd ratio metric – are darker skin-toned players more likely to receive red cards from referees?
+The project is based on a crowd-sourced research experiment conducted by Silberzahn & Uhlmann in 2015, during which 29 teams of data experts were tasked to analyze the same dataset about soccer players and attempt to answer the same question using an odds ratio metric – are darker skin-toned players more likely to receive red cards from referees?
 
-29 teams produced 20 odd ratios ranging from 0.89 (more unlikely) to 1 (unlikely) and to 2.9 (more likely).
+29 teams produced 20 odds ratios ranging from 0.89 (more unlikely) to 1 (unlikely) and to 2.9 (more likely).
 
 #### Illustration of experiment process
 
